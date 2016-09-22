@@ -25,11 +25,10 @@ CustomBot.prototype.parse_message_text = function(){
 CustomBot.prototype.help = function(){
   this.bot.sendMessage(
     this.message.channel,
-    "All commands work only when you specifically mention me, or send me a private message. " +
-    "Type `queue me` or `q me` to queue yourself. You can pass an additional parameter to let the TA know what topic you want to discuss like: `queue me Javascript is hard`." +
-    "Use `status` to check the current queue." +
-    "Type `remove me` to remove yourself." +
-    "For a more thorough list of commands see the documentation: http://bit.ly/2atTknS"
+    "I am q-bot and I manage the queue!! All commands work only when you specifically mention me, or send me a private message. ".toUpperCase() +
+    "Type `queue me` or `q me` to queue yourself. You can pass an additional parameter to let the TA know what topic you want to discuss like: `queue me Javascript is hard`.".toUpperCase() +
+    "Use `status` to check the current queue.".toUpperCase() +
+    "Type `remove me` to remove yourself.".toUpperCase()
   );
 };
 
@@ -87,7 +86,7 @@ CustomBot.prototype.respond = function(message){
 
   switch(text){
     case "hello":
-      this.bot.sendMessage(this.channel, `Hello, ${this.full_name}`);
+      this.bot.sendMessage(this.channel, `HELLO, ${this.full_name}`);
       break;
     case "queue":
     case "status":
