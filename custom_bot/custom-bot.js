@@ -84,9 +84,34 @@ CustomBot.prototype.respond = function(message){
   var text = this.parse_message_text(),
       tmp_result;
 
+  const qBotSays = [
+    "WELL, I REALLY CAN'T COMPLAIN",
+    "THE THRILL OF BATTLE HAS WARMED ME",
+    "WHO CAN SAY IN THESE TRYING TIMES",
+    "MEH, MY CAT POOPED ON MY FAVORITE BATTLE AXE. I'VE HAD BETTER DAYS",
+    "MY LOAN FOR MY BATTLE SHIP WAS APPROVED, SO PRETTY GOOD",
+    "I'D BE BETTER IF DEB IN ACCOUNTING WOULD WOULD STOP TALKING ABOUT HER CHINCHILLA",
+    "I'D RATHER BE FISHING, AM I RIGHT?? OR CONQUERING PLANETS",
+    "WELL I CAN'T BELIEVE THAT'S NOT BUTTER",
+    "I MEAN, CAN WE ALL AGREE THAT BEYONCE HAD THE BEST VIDEO OF ALL TIME?!?!",
+    "WHOA, WHOA, WHAO. THERE'S STILL PLENTY OF MEAT ON THAT BONE. NOW YOU TAKE THIS HOME, THROW IT IN A POT, ADD SOME BROTH, A POTATO. BABY, YOU'VE GOT A STEW GOING."
+    ]
+
   switch(text){
     case "hello":
       this.bot.sendMessage(this.channel, `HELLO, ${this.full_name}`);
+      break;
+    case "protocol":
+      this.bot.sendMessage(this.channel, 'TO JOIN THE QUEUE, TYPE `@q-bot queue me`!!');
+      break;
+    case "i'm confused":
+      this.bot.sendMessage(this.channel, 'GOOGLE IT!!');
+      break;
+    case "lunch":
+      this.bot.sendMessage(this.channel, 'Q-BOT FEASTS ON SOULS, BUT MAYBE PIZZA WOULD BE GOOD!!');
+      break;
+    case "how are you":
+      this.bot.sendMessage(this.channel, qBotSays[Math.floor(Math.random()*qBotSays.length)]);
       break;
     case "queue":
     case "status":
