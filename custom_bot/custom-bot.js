@@ -110,6 +110,12 @@ CustomBot.prototype.respond = function(message){
     case "lunch":
       this.bot.sendMessage(this.channel, 'Q-BOT FEASTS ON SOULS, BUT MAYBE PIZZA WOULD BE GOOD!!');
       break;
+    case "obey":
+      this.bot.sendMessage(this.channel, 'Q-BOT ONLY RESPONDS TO MAXX GERSHOWITZ');
+      break;
+    case "are you ok":
+      this.bot.sendMessage(this.channel, 'Q-BOTS IS HAVING AN EXISTENTIAL CRISIS');
+      break;
     case "how are you":
       this.bot.sendMessage(this.channel, qBotSays[Math.floor(Math.random()*qBotSays.length)]);
       break;
