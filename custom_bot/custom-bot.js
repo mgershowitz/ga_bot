@@ -119,6 +119,10 @@ CustomBot.prototype.respond = function(message){
     case "how are you":
       this.bot.sendMessage(this.channel, qBotSays[Math.floor(Math.random()*qBotSays.length)]);
       break;
+    // case "queue me":
+    // case "q me":
+    //   this.bot.sendMessage(this.channel, 'http://mrwgifs.com/wp-content/uploads/2014/02/David-Bowie-Slaps-Cookies-Out-Of-Your-Hands-In-The-Man-Who-Fell-To-Earth-Music-Video.gif');
+    //   break;
     case "queue":
     case "status":
       this.bot.sendMessage(this.channel, this.print_queue());

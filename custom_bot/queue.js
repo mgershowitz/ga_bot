@@ -8,7 +8,7 @@ module.exports = function(CustomBot){
       "users.info",
       { user: this.message.user },
       function(data) {
-        this.name = data.user.name;
+        this.name = data.user.name || "";
 
         db.get(
           "SELECT name FROM queue WHERE name='" + this.name + "' LIMIT 1",
