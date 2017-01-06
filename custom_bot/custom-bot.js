@@ -25,10 +25,10 @@ CustomBot.prototype.parse_message_text = function(){
 CustomBot.prototype.help = function(){
   this.bot.sendMessage(
     this.message.channel,
-    "Hello, I am C3P0, protocol droid, human-cyborg relations. I am fluent in over 6 million forms of communication, including JavaScript, Ruby and SQL"+
+    "Hello, I am C3P0, protocol droid, human-cyborg relations. I am fluent in over 6 million forms of communication, including JavaScript, Ruby and SQL. "+
     "All commands work only when you specifically mention me, or send me a private message. " +
-    "Type `queue me` or `q me` to queue yourself. You can pass an additional parameter to let the TA know what topic you want to discuss like: `queue me Javascript is hard`." +
-    "Use `status` to check the current queue." +
+    "To join the queue, you must have a particular question attached to the command. Type `queue me Javascript is hard` or `q me i don't understand functions` to queue yourself. This way, Master Matt can help in the best way possible. " +
+    "Use `status` to check the current queue. " +
     "Type `remove me` to remove yourself."
   );
 };
@@ -85,52 +85,33 @@ CustomBot.prototype.respond = function(message){
   var text = this.parse_message_text(),
       tmp_result;
 
-  const qBotSays = [
-    "WELL, I REALLY CAN'T COMPLAIN",
-    "THE THRILL OF BATTLE HAS WARMED ME",
-    "WHO CAN SAY IN THESE TRYING TIMES",
-    "MEH, MY CAT POOPED ON MY FAVORITE BATTLE AXE. I'VE HAD BETTER DAYS",
-    "MY LOAN FOR MY BATTLE SHIP WAS APPROVED, SO PRETTY GOOD",
-    "I'D BE BETTER IF DEB IN ACCOUNTING WOULD WOULD STOP TALKING ABOUT HER CHINCHILLA",
-    "I'D RATHER BE FISHING, AM I RIGHT?? OR CONQUERING PLANETS",
-    "WELL I CAN'T BELIEVE THAT'S NOT BUTTER",
-    "I MEAN, CAN WE ALL AGREE THAT BEYONCE HAS THE BEST VIDEO OF ALL TIME?!?!",
-    "WHOA, WHOA, WHAO. THERE'S STILL PLENTY OF MEAT ON THAT BONE. NOW YOU TAKE THIS HOME, THROW IT IN A POT, ADD SOME BROTH, A POTATO. BABY, YOU'VE GOT A STEW GOING."
-    ]
-
   switch(text){
     case "hello":
-      this.bot.sendMessage(this.channel, `HELLO, ${this.full_name}`);
+      this.bot.sendMessage(this.channel, `Greetings ${this.full_name}! It is I, C-3PO! You probably do not recognize me because of the red arm`);
       break;
-    case "protocol":
-      this.bot.sendMessage(this.channel, 'TO JOIN THE QUEUE, TYPE `@q-bot queue me`!!');
+    case "commands":
+      this.bot.sendMessage(this.channel, 'Oh my, yes, these are a list of my commands  `queue me` `q me` `remove me` `remove` `threepio` `i\'m confused` `obey` `dark side` `R2D2`');
       break;
     case "i'm confused":
-      this.bot.sendMessage(this.channel, 'GOOGLE IT!!');
+      this.bot.sendMessage(this.channel, 'Although I am programed in over 6 million forms of communication, Google might be a bit more advanced','https://m.popkey.co/5aefe6/9wdDD_s-200x150.gif');
       break;
-    case "lunch":
-      this.bot.sendMessage(this.channel, 'Q-BOT FEASTS ON SOULS, BUT MAYBE PIZZA WOULD BE GOOD!!');
+    case "Artoo":
+    case "R2D2":
+    case "r2":
+      this.bot.sendMessage(this.channel, 'https://www.youtube.com/watch?v=B6mh45mA_JY');
       break;
     case "obey":
-      this.bot.sendMessage(this.channel, 'Q-BOT ONLY RESPONDS TO MAXX GERSHOWITZ');
+      this.bot.sendMessage(this.channel, 'I only obey Master Matt');
       break;
-    case "are you ok":
-      this.bot.sendMessage(this.channel, 'Q-BOTS IS HAVING AN EXISTENTIAL CRISIS');
-      break;
-    case "how are you":
+    case "threepio":
       this.bot.sendMessage(this.channel, this.bot_flavor.quotes[Math.floor(Math.random()*this.bot_flavor.greeting.length)]);
-      break;
-    case "what is the meaning of life":
-    case "what is the answer to life's question":
-      this.bot.sendMessage(this.channel, 'THE ANSWER IS 42!!');
       break;
     case "queue me":
     case 'q me':
-      this.bot.sendMessage(this.channel, 'http://i.imgur.com/C7yYGMW.png');
+      this.bot.sendMessage(this.channel, "If you're going to queue, it's best to come with a question");
       break;
-    case "kevin":
-      this.bot.sendMessage(this.channel, 'KEVIN IS FOREVER BANNED FROM TA HOURS!!!!!');
-      break;
+    case "dark side":
+      this.bot.sendMessage(this.channel, 'http://41.media.tumblr.com/e3a3451fa0ca9c0740ccefbbe792cdcb/tumblr_o151s0BmQk1r46py4o1_500.jpg')
     case "queue":
     case "status":
       this.bot.sendMessage(this.channel, this.print_queue());

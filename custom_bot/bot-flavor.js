@@ -1,12 +1,12 @@
 var bot_flavor = {
   "present": "Hello, you are here.",
-  "already_queued": "You are already in queue",
+  "already_queued": "Pardon me, but it seems you are already in queue"+' '+'http://31.media.tumblr.com/1cda597f414096cc6b61ddfacdbd39a2/tumblr_mqray9iwQI1qevt7bo1_500.gif',
   "secret_set": "Secret already set!",
-  "remove": "You have been removed!",
-  "empty_queue": "Queue is empty.",
+  "remove": "http://bestanimations.com/Sci-Fi/StarWars/R2D2/r2d2-c3po-animated-gif-2.gif",
+  "empty_queue": "Oh my Artoo, it seems that no one is in need of our assistance."+" "+"https://media3.giphy.com/media/n7Kv7tLf2UzMk/200_s.gif",
   "attendance_cleared": "Attendance cleared",
-  "attendance_zero": "No one is here.",
-  "greeting": "Goodness! Matt Gershowitz! It is I, C-3PO! You probably do not recognize me because of the red arm...",",
+  "attendance_zero": "Oh my Artoo, it seems that no one is in need of our assistance."+" "+"https://media3.giphy.com/media/n7Kv7tLf2UzMk/200_s.gif",
+  "greeting": "Goodness! Matt Gershowitz! It is I, C-3PO! You probably do not recognize me because of the red arm...",
   "shuffle": "who's next, i don't know",
   "quotes": [
     "I suggest a new strategy, Artoo: let the Wookie win",

@@ -1,22 +1,26 @@
 var db = require("./database")();
 
 module.exports = function(CustomBot){
-  // CustomBot.prototype.add_to_queue = function(details){
-  //   this.details = details;
+  CustomBot.prototype.add_to_queue = function(details){
+    this.details = details;
 
-  //   this.bot.api(
-  //     "users.info",
-  //     { user: this.message.user },
-  //     function(data) {
-  //       this.name = data.user.name || "";
+    this.bot.api(
+      "users.info",
+      { user: this.message.user },
+      function(data) {
+        if(typeof data.user === 'undefined'){
+          console.log('error')
+          return
+        }
+        this.name = data.user.name || "";
 
-  //       db.get(
-  //         "SELECT name FROM queue WHERE name='" + this.name + "' LIMIT 1",
-  //         this.check_and_insert.bind(this)
-  //       );
-  //     }.bind(this)
-  //   );
-  // };
+        db.get(
+          "SELECT name FROM queue WHERE name='" + this.name + "' LIMIT 1",
+          this.check_and_insert.bind(this)
+        );
+      }.bind(this)
+    );
+  };
 
   CustomBot.prototype.check_and_insert = function(err, rows){
     if(rows){
