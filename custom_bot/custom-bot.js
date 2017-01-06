@@ -107,7 +107,7 @@ CustomBot.prototype.respond = function(message){
       this.bot.sendMessage(this.channel, 'I only obey Master Matt');
       break;
     case "threepio":
-      this.bot.sendMessage(this.channel, this.bot_flavor.quotes[Math.floor(Math.random()*this.bot_flavor.greeting.length)]);
+      this.bot.sendMessage(this.channel, this.bot_flavor.quotes[Math.floor(Math.random()*this.bot_flavor.quotes.length)]);
       break;
     case "queue me":
     case 'q me':
