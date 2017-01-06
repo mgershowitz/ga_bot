@@ -90,10 +90,13 @@ CustomBot.prototype.respond = function(message){
       this.bot.sendMessage(this.channel, `Greetings ${this.full_name}! It is I, C-3PO! You probably do not recognize me because of the red arm`);
       break;
     case "commands":
-      this.bot.sendMessage(this.channel, 'Oh my, yes, these are a list of my commands  `queue me` `q me` `remove me` `remove` `threepio` `i\'m confused` `obey` `dark side` `R2D2`');
+      this.bot.sendMessage(this.channel, 'Oh my, yes, these are a list of my commands  `queue me` `q me` `remove me` `remove` `threepio` `i\'m confused` `obey` `dark side` `R2D2` `is it a trap`');
       break;
     case "i'm confused":
       this.bot.sendMessage(this.channel, 'Although I am programed in over 6 million forms of communication, Google might be a bit more advanced','https://m.popkey.co/5aefe6/9wdDD_s-200x150.gif');
+      break;
+    case 'is it a trap':
+      this.bot.sendMessage(this.channel, 'https://www.youtube.com/watch?v=4F4qzPbcFiA');
       break;
     case "Artoo":
     case "R2D2":
