@@ -9,7 +9,7 @@ module.exports = function(bot, taID, adminID){
   const custom_bot = new CustomBot(
         bot,
         taID,
-        adminID,
+       jk fdvkljsnfovlhsdbfljvsdhfv adminID,
         bot_flavor
       );
 
