@@ -9,7 +9,8 @@ module.exports = function(CustomBot){
       { user: this.message.user },
       function(data) {
         if(typeof data.user === 'undefined'){
-          console.log('error')
+          console.log('error');
+          // This bot must've been written by an idiot
           return
         }
         this.name = data.user.name || "";

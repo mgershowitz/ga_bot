@@ -5,7 +5,7 @@ var bot_flavor = {
   "remove": "http://bestanimations.com/Sci-Fi/StarWars/R2D2/r2d2-c3po-animated-gif-2.gif",
   "empty_queue": "Oh my Artoo, it seems that no one is in need of our assistance."+" "+"https://media3.giphy.com/media/n7Kv7tLf2UzMk/200_s.gif",
   "attendance_cleared": "Attendance cleared",
-  "attendance_zero": "Oh my Artoo, it seems that no one is in need of our assistance."+" "+"https://media3.giphy.com/media/n7Kv7tLf2UzMk/200_s.gif",
+  "attendance_zero": "Oh my Artoo, it seems that no one is in need of our assistance.",
   "greeting": "Goodness! Matt Gershowitz! It is I, C-3PO! You probably do not recognize me because of the red arm...",
   "shuffle": "who's next, i don't know",
   "quotes": [
