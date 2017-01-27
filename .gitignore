@@ -1,0 +1,12 @@
+*.swp
+*.swo
+*.sqlite3
+
+.DS_STORE
+
+/node_modules
+/db
+
+custom_bot/bot-flavor.js
+env-vars.js
+npm-debug.log

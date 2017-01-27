@@ -8,11 +8,13 @@ module.exports = function(CustomBot){
       "users.info",
       { user: this.message.user },
       function(data) {
+
         if(typeof data.user === 'undefined'){
           console.log('error');
           // This bot must've been written by an idiot
           return
         }
+
         this.name = data.user.name || "";
 
         db.get(
@@ -109,7 +111,5 @@ module.exports = function(CustomBot){
     );
   };
 
-  // CustomBot.prototype.random = function(){
-
-  }
+};
 

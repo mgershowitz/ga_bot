@@ -114,7 +114,7 @@ CustomBot.prototype.respond = function(message){
       this.bot.sendMessage(this.channel, "If you're going to queue, it's best to come with a question");
       break;
     case "dark side":
-      this.bot.sendMessage(this.channel, 'http://41.media.tumblr.com/e3a3451fa0ca9c0740ccefbbe792cdcb/tumblr_o151s0BmQk1r46py4o1_500.jpg')
+      this.bot.sendMessage(this.channel, 'http://41.media.tumblr.com/e3a3451fa0ca9c0740ccefbbe792cdcb/tumblr_o151s0BmQk1r46py4o1_500.jpg');
     case "queue":
     case "status":
       this.bot.sendMessage(this.channel, this.print_queue());
