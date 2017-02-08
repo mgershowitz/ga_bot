@@ -6,7 +6,7 @@ var bot_flavor = {
   "empty_queue": "Oh my Artoo, it seems that no one is in need of our assistance."+" "+"https://media3.giphy.com/media/n7Kv7tLf2UzMk/200_s.gif",
   "attendance_cleared": "Attendance cleared",
   "attendance_zero": "Oh my Artoo, it seems that no one is in need of our assistance.",
-  "greeting": "Goodness! Matt Gershowitz! It is I, C-3PO! You probably do not recognize me because of the red arm...",
+  "greeting": "Goodness! Daniel! It is I, C-3PO! You probably do not recognize me because of the red arm...",
   "shuffle": "who's next, i don't know",
   "quotes": [
     "I suggest a new strategy, Artoo: let the Wookie win",
