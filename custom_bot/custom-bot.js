@@ -27,7 +27,7 @@ CustomBot.prototype.help = function(){
     this.message.channel,
     "Hello, I am C3P0, protocol droid, human-cyborg relations. I am fluent in over 6 million forms of communication, including JavaScript, Ruby and SQL. "+
     "All commands work only when you specifically mention me, or send me a private message. " +
-    "To join the queue, you must have a particular question attached to the command. Type `queue me Javascript is hard` or `q me i don't understand functions` to queue yourself. This way, Master Matt can help in the best way possible. " +
+    "To join the queue, you must have a particular question attached to the command. Type `queue me Javascript is hard` or `q me i don't understand functions` to queue yourself. This way, Master Daniel can help in the best way possible. " +
     "Use `status` to check the current queue. " +
     "Type `remove me` to remove yourself."
   );
@@ -104,7 +104,7 @@ CustomBot.prototype.respond = function(message){
       this.bot.sendMessage(this.channel, 'https://www.youtube.com/watch?v=B6mh45mA_JY');
       break;
     case "obey":
-      this.bot.sendMessage(this.channel, 'I only obey Master Matt');
+      this.bot.sendMessage(this.channel, 'I only obey Master Daniel');
       break;
     case "threepio":
       this.bot.sendMessage(this.channel, this.bot_flavor.quotes[Math.floor(Math.random()*this.bot_flavor.quotes.length)]);

@@ -8,10 +8,8 @@ module.exports = function(CustomBot){
       "users.info",
       { user: this.message.user },
       function(data) {
-
         if(typeof data.user === 'undefined'){
-          console.log('error');
-          // This bot must've been written by an idiot
+          console.log('user undefined');
           return
         }
 
@@ -112,4 +110,3 @@ module.exports = function(CustomBot){
   };
 
 };
-
